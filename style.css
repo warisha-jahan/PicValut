@@ -1,0 +1,295 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Trebuchet MS';
+
+
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #c8b6ff; */
+
+}
+
+.logo {
+    font-size: 35px;
+    color: black;
+    font-weight: bold;
+    line-height: 80px;
+    padding: 15px;
+    cursor: pointer;
+    transition: font-size 0.4s;
+    margin: 10px;
+}
+
+.logo:hover {
+    font-size: 45px;
+}
+
+.search-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    background: linear-gradient(rgba(0, 0, 0, 0.511), rgba(0, 0, 0, 0.602)), url(images/bg.jpg ) center center/cover no-repeat;
+    color: white;
+
+
+}
+
+
+.search-bar input::placeholder {
+    color: rgba(201, 200, 200, 0.788);
+}
+
+.search-bar input {
+    text-align: center;
+    padding: 10px 50px;
+    text-transform: capitalize;
+    color: white;
+    margin-right: 15px;
+    width: 30%;
+    background-color: transparent;
+    border: 1px solid white;
+    transition: transform 1.2s;
+    font-size: 18px;
+
+}
+
+.search-icon img {
+    cursor: pointer;
+
+}
+
+
+.search-icon img:hover {
+    transform: scale(1.2);
+}
+
+
+
+
+.menu {
+    float: right;
+    line-height: 80px;
+    margin-right: 30px;
+
+}
+
+.menu a {
+    color: white;
+
+    margin: 20px 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: black;
+    width: 130px;
+    height: 50px;
+    box-shadow: 4px 2px 8px rgb(95, 81, 81);
+    transition: all 0.3s ease;
+    /* Smooth transition for hover effects */
+    display: inline-flex;
+    /* Ensure the element is inline-flex for hover effects */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 30px;
+    line-height: 80px;
+
+}
+
+.menu a:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    transform: scale(1.1) !important;
+    box-shadow: 4px 4px 12px grey;
+}
+
+
+
+
+.checkbtn {
+    font-size: 30px;
+    float: right;
+    line-height: 80px;
+    margin-right: 25px;
+    display: none;
+    margin: 10px;
+}
+
+#check {
+    display: none;
+}
+
+
+
+/* Gallery Container */
+
+.container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 8%;
+    min-height: 60vh;
+    margin: 50px 0px;
+
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+}
+
+.gallery img,
+.gallery video {
+    max-width: 100%;
+    cursor: pointer;
+    box-shadow: 4px 2px 10px 1px grey;
+    border-radius: 10px;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.gallery-item {
+    position: relative;
+   
+}
+
+.play-btn {
+    max-width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    box-shadow: none;
+
+
+}
+
+/* Hover effects */
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    opacity: 0.7;
+}
+
+
+
+
+
+
+@media (min-width: 900px) and (max-width:1300px) {
+    .search-bar input {
+        padding: 8px 50px;
+        width: 40%;
+        font-size: 16px;
+    }
+}
+
+@media (max-width:900px) {
+    .checkbtn {
+        display: block;
+    }
+
+
+    .search-bar {
+        height: 200px;
+    }
+
+    .menu {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        top: 80px;
+        left: -100%;
+        background-color: black;
+        transition: 1s;
+    }
+
+    .menu a {
+        display: block;
+        text-align: center;
+        font-size: 20px;
+        background-color: none;
+        color: white;
+        box-shadow: none;
+        border-radius: none;
+        text-align: center;
+
+
+
+    }
+
+
+
+    #check:checked~.menu {
+        left: 0;
+        z-index: 2;
+       text-align: center;
+       width: 50%;
+       height: 100vh;
+      
+    }
+
+
+
+    .search-bar input {
+        padding: 8px 50px;
+        width: 50%;
+        font-size: 13px;
+    }
+
+    .search-icon img {
+        max-width: 80%;
+    }
+
+
+
+
+
+}
+
+
+@media (max-width:500px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .social {
+        display: none;
+    }
+
+    .search-bar input {
+        padding: 5px 50px;
+        width: 50%;
+        font-size: 9px;
+    }
+
+    .search-icon img {
+        max-width: 50%;
+    }
+
+    .checkbtn {
+        font-size: 22px;
+
+    }
+
+    .search-bar {
+        height: 100px;
+    }
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>PicValut</title>
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="lightbox.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="upload.css">
+</head>
+
+<body>
+   <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+         <i class="fa fa-bars"></i>
+      </label>
+      <label class="logo">PicVault</label>
+
+
+
+      <div class="menu">
+         <a href="index.html">Images</a>
+         <a href="videos.html">Videos</a>
+         <button id="plus">Upload <i class="fa fa-plus"></i></button>
+      </div>
+
+   </nav>
+
+   <section class="search-bar">
+
+      <input type="text" placeholder="Search for free media" id="search-input">
+      <label for="search-input" class="search-icon">
+         <img src="images/find (1).png" >
+      </label>
+
+   </section>
+
+   <section class="container">
+
+
+      <div class="gallery videos">
+         <!-- Rain Videos -->
+         <a href="videos/rain1.mp4" data-title="rain" class="gallery-item">
+            <video src="videos/rain1.mp4"  autoplay></video>
+            <div class="play-btn-box">
+               <img src="images/play.png"alt="" class="play-btn">
+            </div>
+           
+         </a>
+         <a href="videos/rain2.mp4" data-title="rain" class="gallery-item">
+            <video src="videos/rain2.mp4"  autoplay></video>
+            <div class="play-btn-box">
+               <img src="images/play.png"alt="" class="play-btn">
+            </div>
+           
+         </a>
+         <a href="videos/rain3.mp4" data-title="rain" class="gallery-item">
+            <video src="videos/rain3.mp4"  autoplay></video>
+            <div class="play-btn-box">
+               <img src="images/play.png"alt="" class="play-btn">
+            </div>
+           
+         </a>
+         <!-- Sky Videos -->
+         <a href="videos/sky1.mp4" data-title="sky" class="gallery-item">
+            <video src="videos/sky1.mp4" autoplay></video>
+            <div class="play-btn-box">
+               <img src="images/play.png"alt="" class="play-btn">
+            </div>
+         </a>
+
+         <!-- Business Videos -->
+         <a href="videos/business (1).mp4" data-title="business" class="gallery-item">
+            <video src="videos/business (1).mp4" autoplay></video>
+            <div class="play-btn-box">
+               <img src="images/play.png"alt="" class="play-btn">
+            </div>
+         </a>
+         <a href="videos/business (2).mp4" data-title="business" class="gallery-item">
+            <video src="videos/business (2).mp4"autoplay></video>
+            <div class="play-btn-box">
+               <img src="images/play.png"alt="" class="play-btn">
+            </div>
+         </a>
+         <a href="videos/business (3).mp4" data-title="business" class="gallery-item">
+            <video src="videos/business (3).mp4" autoplay></video>
+            <div class="play-btn-box">
+               <img src="images/play.png"alt="" class="play-btn">
+            </div>
+         </a>
+         <a href="videos/business (4).mp4" data-title="business" class="gallery-item">
+            <video src="videos/business (4).mp4" autoplay></video>
+            <div class="play-btn-box">
+               <img src="images/play.png"alt="" class="play-btn">
+            </div>
+         </a>
+         <a href="videos/business (5).mp4" data-title="business" class="gallery-item">
+            <video src="videos/business (5).mp4" autoplay></video>
+            <div class="play-btn-box">
+               <img src="images/play.png"alt="" class="play-btn">
+            </div>
+         </a>
+
+
+      </div>
+
+   </section>'
+   <section>
+      <div class="container" id="upload">
+         <div class="upload-container" >
+             <label class="img-area" for="myFile" >
+                 <i class="fa fa-upload icon"></i>
+                 <h3>Select Media</h3>
+                 <p>File Size Must Be Less Then <span>2MB</span></p>
+             </label>
+
+             <div class="upload-area">
+                 <form>
+                     <input type="file" id="myFile" name="filename">
+
+                 </form>
+             </div>
+         </div>
+     </div>
+     <div id="titleModal" class="modal">
+         <div class="modal-content">
+             <span class="close">&times;</span>
+             <label for="mediaTitle">Enter Media Title:</label>
+             <input type="text" id="mediaTitle" name="mediaTitle">
+             <button type="submit" class="submit-btn" id="submitTitleBtn">Submit</button>
+         </div>
+     </div>
+   </section>
+   <script src="lightbox-plus-jquery.min.js"></script>
+   <script src="scripts.js"></script>
+   <script src="upload.js"></script>
+</body>
+
+</html>
